@@ -31,7 +31,6 @@ use openmm_bindings::openmm_bindings::*;
 	 let system = OpenMM_System_create();
 	 let nonbond = OpenMM_NonbondedForce_create();
 	 OpenMM_System_addForce(system, nonbond as *mut OpenMM_Force);
-		OpenMM_Platform_registerPlatform(OpenMM_Platform_getPlatformByName("cpu"));
 	 // Create three atoms.
 	 let n_atoms = 4;
 	 let init_pos = OpenMM_Vec3Array_create(n_atoms);
